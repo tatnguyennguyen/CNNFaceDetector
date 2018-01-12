@@ -14,13 +14,9 @@ if __name__ == '__main__':
         print fn
         img = cv2.imread(fn)
         if img is None:
-            print 'Cannot read ', sys.argv[1]
-            exit(1)
+            print 'Cannot read ', fn
 
-        rows, cols = img.shape[:2]
-        new_img = cv2.resize(img, (cols, rows))
-
-        bb, score = detect.get_bounding_box(new_img, 29, None, 1.25, [0.4, 0, 1], 0.3)
+        bb, score = detect.get_bounding_box(img, 29, None, 1.25, [0.4, 0, 1], 0.3)
         print 'Detected', len(bb), 'faces'
 
         for r, c, s in bb:
