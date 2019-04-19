@@ -1,10 +1,10 @@
 # Cascade CNN for face detection
-## Cài đặt các thư viện cần thiết
+## Install required libraries
 ```
-sudo pip install tensorflow keras cv2
+pip install tensorflow keras opencv-python
 ```
-## Sử dụng
-Xem ví dụ trong file [test_image.py](test_image.py)
-## Ví dụ
+## Usage
+Please see [test_image.py](test_image.py)
+## Example
 ![Example](faceposeid1.jpg_out.png)
 
